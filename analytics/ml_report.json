@@ -1,0 +1,75 @@
+{
+  "report_title": "GlobeTrack ML Models Report",
+  "generated_at": "2026-04-06T18:04:43.381249+00:00",
+  "threshold_used": 0.4,
+  "models_trained": [
+    "XGBoost",
+    "LightGBM",
+    "Random Forest"
+  ],
+  "selection_method": "Logistics Score = 0.4*AUC + 0.6*Recall",
+  "improvements": [
+    "Split before balance \u2014 no data leakage",
+    "Threshold = 0.4 for better recall",
+    "scale_pos_weight on XGBoost",
+    "is_unbalance on LightGBM",
+    "balanced_subsample on Random Forest",
+    "Early stopping on XGBoost and LightGBM",
+    "Interaction features: cargo_stress_index,",
+    "  distance_cargo_risk, express_risk_score",
+    "No weather leakage in features"
+  ],
+  "model_results": {
+    "XGBoost": {
+      "accuracy_pct": 68.96,
+      "auc_pct": 73.13,
+      "recall_pct": 56.84,
+      "true_positives": 23460,
+      "false_negatives": 17814,
+      "train_time_s": 0.0
+    },
+    "LightGBM": {
+      "accuracy_pct": 70.8,
+      "auc_pct": 72.86,
+      "recall_pct": 52.3,
+      "true_positives": 21586,
+      "false_negatives": 19688,
+      "train_time_s": 1.0
+    },
+    "Random Forest": {
+      "accuracy_pct": 69.43,
+      "auc_pct": 72.75,
+      "recall_pct": 55.5,
+      "true_positives": 22906,
+      "false_negatives": 18368,
+      "train_time_s": 68.7
+    }
+  },
+  "best_model": "XGBoost",
+  "best_metrics": {
+    "accuracy_pct": 68.96,
+    "auc_pct": 73.13,
+    "recall_pct": 56.84,
+    "true_positives": 23460
+  },
+  "feature_count": 17,
+  "features": [
+    "distance_km",
+    "cargo_weight_kg",
+    "cargo_value_inr",
+    "freight_charge_inr",
+    "is_express",
+    "is_long_haul",
+    "is_heavy_cargo",
+    "is_high_value",
+    "heavy_long_haul",
+    "revenue_per_km",
+    "cargo_stress_index",
+    "distance_cargo_risk",
+    "express_risk_score",
+    "origin_city_enc",
+    "destination_city_enc",
+    "cargo_type_enc",
+    "priority_enc"
+  ]
+}

@@ -1,0 +1,27 @@
+{
+  "best_model_name": "XGBoost",
+  "threshold": 0.45,
+  "feature_cols": [
+    "distance_km",
+    "cargo_weight_kg",
+    "cargo_value_inr",
+    "freight_charge_inr",
+    "is_express",
+    "is_long_haul",
+    "is_heavy_cargo",
+    "is_high_value",
+    "heavy_long_haul",
+    "revenue_per_km",
+    "cargo_stress_index",
+    "distance_cargo_risk",
+    "express_risk_score",
+    "origin_city_enc",
+    "destination_city_enc",
+    "cargo_type_enc",
+    "priority_enc"
+  ],
+  "accuracy": 68.96,
+  "auc": 73.13,
+  "recall_delayed": 56.84,
+  "saved_at": "2026-04-06T18:04:43.380248+00:00"
+}
