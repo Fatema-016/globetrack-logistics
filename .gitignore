@@ -1,0 +1,20 @@
+ # Python
+__pycache__/
+*.pyc
+*.pyo
+.env
+venv/
+
+# AWS credentials 
+.aws/
+credentials
+*.pem
+
+# Data files
+data/*.csv
+*.parquet
+*.orc
+
+
+# VS Code
+.vscode/
