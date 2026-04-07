@@ -1,0 +1,617 @@
+{
+  "report_title": "GlobeTrack Logistics Analytics Report",
+  "company": "GlobeTrack Logistics Ltd.",
+  "generated_at": "2026-04-07T03:45:47.169946+00:00",
+  "project": "TCS iON AIP-135",
+  "cloud_platform": "AWS ap-south-1 Mumbai",
+  "dataset_scale": "1.8M raw records ingested",
+  "fleet_kpis": {
+    "total_vehicles": 50,
+    "total_readings": 600000,
+    "avg_speed_kmh": 73.14,
+    "max_speed_kmh": 120.0,
+    "avg_fuel_level_pct": 55.61,
+    "avg_engine_health": 83.53,
+    "avg_fuel_efficiency_kmpl": 36.93,
+    "fleet_health_pct": 94.5,
+    "anomalous_readings": 32763,
+    "anomaly_rate_pct": 5.5,
+    "tier_breakdown": {
+      "MID": {
+        "count": 215642,
+        "avg_speed": 73.11,
+        "avg_fuel": 55.0,
+        "avg_health": 83.01
+      },
+      "NEW": {
+        "count": 180187,
+        "avg_speed": 73.12,
+        "avg_fuel": 74.02,
+        "avg_health": 96.16
+      },
+      "OLD": {
+        "count": 204171,
+        "avg_speed": 73.18,
+        "avg_fuel": 40.01,
+        "avg_health": 72.93
+      }
+    },
+    "speed_distribution": {
+      "FAST": 258453,
+      "MODERATE": 191075,
+      "OVERSPEEDING": 150431,
+      "SLOW": 41
+    }
+  },
+  "delivery_kpis": {
+    "total_orders": 580107,
+    "total_delivered": 229893,
+    "total_delayed": 206368,
+    "total_cancelled": 26359,
+    "total_in_transit": 65173,
+    "total_booked": 52314,
+    "on_time_rate_pct": 39.6,
+    "delay_rate_pct": 35.6,
+    "cancellation_rate_pct": 4.5,
+    "total_revenue_inr": 6430823008.0,
+    "avg_freight_charge_inr": 11086.0,
+    "avg_distance_km": 409.4,
+    "express_orders": 98561,
+    "express_pct": 17.0
+  },
+  "top_revenue_routes": [
+    {
+      "origin_city": "Mumbai",
+      "destination_city": "Nagpur",
+      "total_revenue": 449803045,
+      "order_count": 20712
+    },
+    {
+      "origin_city": "Mumbai",
+      "destination_city": "Goa",
+      "total_revenue": 324355782,
+      "order_count": 20670
+    },
+    {
+      "origin_city": "Pune",
+      "destination_city": "Nagpur",
+      "total_revenue": 309623929,
+      "order_count": 16564
+    },
+    {
+      "origin_city": "Mumbai",
+      "destination_city": "Solapur",
+      "total_revenue": 255403004,
+      "order_count": 20929
+    },
+    {
+      "origin_city": "Nagpur",
+      "destination_city": "Mumbai",
+      "total_revenue": 216342084,
+      "order_count": 9953
+    },
+    {
+      "origin_city": "Mumbai",
+      "destination_city": "Kolhapur",
+      "total_revenue": 209278822,
+      "order_count": 20559
+    },
+    {
+      "origin_city": "Pune",
+      "destination_city": "Goa",
+      "total_revenue": 201024925,
+      "order_count": 16521
+    },
+    {
+      "origin_city": "Mumbai",
+      "destination_city": "Aurangabad",
+      "total_revenue": 190655794,
+      "order_count": 20679
+    },
+    {
+      "origin_city": "Nagpur",
+      "destination_city": "Pune",
+      "total_revenue": 184665322,
+      "order_count": 9872
+    },
+    {
+      "origin_city": "Nagpur",
+      "destination_city": "Nashik",
+      "total_revenue": 173739232,
+      "order_count": 9903
+    }
+  ],
+  "delay_by_cargo_type": {
+    "Perishables": 53786,
+    "Fmcg Goods": 36699,
+    "Textiles": 28273,
+    "Automobile Parts": 24461,
+    "Electronics": 20492
+  },
+  "revenue_by_city": {
+    "Mumbai": 1628358238.0,
+    "Nagpur": 1080580899.0,
+    "Pune": 1024020329.0,
+    "Nashik": 695336096.0,
+    "Aurangabad": 580718522.0,
+    "Goa": 515962742.0,
+    "Kolhapur": 503271616.0,
+    "Solapur": 402574566.0
+  },
+  "ml_summary": {
+    "best_model": "XGBoost",
+    "threshold": 0.4,
+    "selection_method": "Logistics Score = 0.4*AUC + 0.6*Recall",
+    "model_results": {
+      "XGBoost": {
+        "accuracy_pct": 68.96,
+        "auc_pct": 73.13,
+        "recall_pct": 56.84,
+        "true_positives": 23460,
+        "false_negatives": 17814,
+        "train_time_s": 0.0
+      },
+      "LightGBM": {
+        "accuracy_pct": 70.8,
+        "auc_pct": 72.86,
+        "recall_pct": 52.3,
+        "true_positives": 21586,
+        "false_negatives": 19688,
+        "train_time_s": 1.0
+      },
+      "Random Forest": {
+        "accuracy_pct": 69.43,
+        "auc_pct": 72.75,
+        "recall_pct": 55.5,
+        "true_positives": 22906,
+        "false_negatives": 18368,
+        "train_time_s": 68.7
+      }
+    },
+    "best_metrics": {
+      "accuracy_pct": 68.96,
+      "auc_pct": 73.13,
+      "recall_pct": 56.84,
+      "true_positives": 23460
+    }
+  },
+  "anomaly_summary": {
+    "total_records": 600000,
+    "anomalous_readings": 32763,
+    "fleet_health_pct": 94.5,
+    "tier_breakdown": {
+      "OLD": {
+        "anomaly_count": 18376,
+        "anomaly_rate_pct": 9.0
+      },
+      "MID": {
+        "anomaly_count": 10783,
+        "anomaly_rate_pct": 5.0
+      },
+      "NEW": {
+        "anomaly_count": 3604,
+        "anomaly_rate_pct": 2.0
+      }
+    },
+    "top_flagged_vehicles": [
+      "GT-030",
+      "GT-002",
+      "GT-001",
+      "GT-012",
+      "GT-004"
+    ]
+  },
+  "vehicle_summary": [
+    {
+      "vehicle_id": "GT-001",
+      "tier": "OLD",
+      "avg_speed": 73.2,
+      "avg_fuel": 39.93,
+      "avg_health": 77.62,
+      "total_readings": 11879
+    },
+    {
+      "vehicle_id": "GT-002",
+      "tier": "OLD",
+      "avg_speed": 73.02,
+      "avg_fuel": 39.81,
+      "avg_health": 67.45,
+      "total_readings": 12070
+    },
+    {
+      "vehicle_id": "GT-003",
+      "tier": "OLD",
+      "avg_speed": 73.41,
+      "avg_fuel": 40.13,
+      "avg_health": 71.84,
+      "total_readings": 11850
+    },
+    {
+      "vehicle_id": "GT-004",
+      "tier": "OLD",
+      "avg_speed": 73.14,
+      "avg_fuel": 40.12,
+      "avg_health": 69.14,
+      "total_readings": 11900
+    },
+    {
+      "vehicle_id": "GT-005",
+      "tier": "OLD",
+      "avg_speed": 73.1,
+      "avg_fuel": 40.17,
+      "avg_health": 71.8,
+      "total_readings": 12137
+    },
+    {
+      "vehicle_id": "GT-006",
+      "tier": "OLD",
+      "avg_speed": 73.19,
+      "avg_fuel": 40.15,
+      "avg_health": 70.66,
+      "total_readings": 11864
+    },
+    {
+      "vehicle_id": "GT-007",
+      "tier": "OLD",
+      "avg_speed": 73.57,
+      "avg_fuel": 40.02,
+      "avg_health": 71.48,
+      "total_readings": 11876
+    },
+    {
+      "vehicle_id": "GT-008",
+      "tier": "OLD",
+      "avg_speed": 73.04,
+      "avg_fuel": 40.02,
+      "avg_health": 72.64,
+      "total_readings": 12092
+    },
+    {
+      "vehicle_id": "GT-009",
+      "tier": "OLD",
+      "avg_speed": 73.31,
+      "avg_fuel": 40.14,
+      "avg_health": 70.04,
+      "total_readings": 12041
+    },
+    {
+      "vehicle_id": "GT-010",
+      "tier": "OLD",
+      "avg_speed": 73.23,
+      "avg_fuel": 39.99,
+      "avg_health": 70.91,
+      "total_readings": 12046
+    },
+    {
+      "vehicle_id": "GT-011",
+      "tier": "OLD",
+      "avg_speed": 73.07,
+      "avg_fuel": 40.04,
+      "avg_health": 75.66,
+      "total_readings": 11987
+    },
+    {
+      "vehicle_id": "GT-012",
+      "tier": "OLD",
+      "avg_speed": 73.13,
+      "avg_fuel": 40.08,
+      "avg_health": 77.63,
+      "total_readings": 12085
+    },
+    {
+      "vehicle_id": "GT-013",
+      "tier": "OLD",
+      "avg_speed": 72.66,
+      "avg_fuel": 40.12,
+      "avg_health": 77.08,
+      "total_readings": 12159
+    },
+    {
+      "vehicle_id": "GT-014",
+      "tier": "OLD",
+      "avg_speed": 73.0,
+      "avg_fuel": 39.79,
+      "avg_health": 75.28,
+      "total_readings": 12034
+    },
+    {
+      "vehicle_id": "GT-015",
+      "tier": "OLD",
+      "avg_speed": 73.51,
+      "avg_fuel": 40.04,
+      "avg_health": 76.53,
+      "total_readings": 11841
+    },
+    {
+      "vehicle_id": "GT-016",
+      "tier": "OLD",
+      "avg_speed": 73.35,
+      "avg_fuel": 39.91,
+      "avg_health": 72.06,
+      "total_readings": 12175
+    },
+    {
+      "vehicle_id": "GT-017",
+      "tier": "OLD",
+      "avg_speed": 73.21,
+      "avg_fuel": 39.77,
+      "avg_health": 71.95,
+      "total_readings": 12135
+    },
+    {
+      "vehicle_id": "GT-018",
+      "tier": "MID",
+      "avg_speed": 73.09,
+      "avg_fuel": 54.95,
+      "avg_health": 83.68,
+      "total_readings": 12047
+    },
+    {
+      "vehicle_id": "GT-019",
+      "tier": "MID",
+      "avg_speed": 73.34,
+      "avg_fuel": 54.63,
+      "avg_health": 80.49,
+      "total_readings": 11852
+    },
+    {
+      "vehicle_id": "GT-020",
+      "tier": "MID",
+      "avg_speed": 73.29,
+      "avg_fuel": 54.83,
+      "avg_health": 80.16,
+      "total_readings": 12054
+    },
+    {
+      "vehicle_id": "GT-021",
+      "tier": "MID",
+      "avg_speed": 73.14,
+      "avg_fuel": 55.04,
+      "avg_health": 82.81,
+      "total_readings": 11999
+    },
+    {
+      "vehicle_id": "GT-022",
+      "tier": "MID",
+      "avg_speed": 72.69,
+      "avg_fuel": 55.09,
+      "avg_health": 80.33,
+      "total_readings": 11893
+    },
+    {
+      "vehicle_id": "GT-023",
+      "tier": "MID",
+      "avg_speed": 73.2,
+      "avg_fuel": 55.08,
+      "avg_health": 80.11,
+      "total_readings": 11963
+    },
+    {
+      "vehicle_id": "GT-024",
+      "tier": "MID",
+      "avg_speed": 73.46,
+      "avg_fuel": 54.9,
+      "avg_health": 84.11,
+      "total_readings": 11857
+    },
+    {
+      "vehicle_id": "GT-025",
+      "tier": "MID",
+      "avg_speed": 73.11,
+      "avg_fuel": 54.78,
+      "avg_health": 83.81,
+      "total_readings": 12027
+    },
+    {
+      "vehicle_id": "GT-026",
+      "tier": "MID",
+      "avg_speed": 73.22,
+      "avg_fuel": 55.05,
+      "avg_health": 86.07,
+      "total_readings": 11971
+    },
+    {
+      "vehicle_id": "GT-027",
+      "tier": "MID",
+      "avg_speed": 73.27,
+      "avg_fuel": 55.13,
+      "avg_health": 83.15,
+      "total_readings": 11859
+    },
+    {
+      "vehicle_id": "GT-028",
+      "tier": "MID",
+      "avg_speed": 72.86,
+      "avg_fuel": 54.94,
+      "avg_health": 84.57,
+      "total_readings": 11979
+    },
+    {
+      "vehicle_id": "GT-029",
+      "tier": "MID",
+      "avg_speed": 72.68,
+      "avg_fuel": 54.97,
+      "avg_health": 86.25,
+      "total_readings": 11934
+    },
+    {
+      "vehicle_id": "GT-030",
+      "tier": "MID",
+      "avg_speed": 73.14,
+      "avg_fuel": 54.86,
+      "avg_health": 88.77,
+      "total_readings": 11924
+    },
+    {
+      "vehicle_id": "GT-031",
+      "tier": "MID",
+      "avg_speed": 72.77,
+      "avg_fuel": 55.06,
+      "avg_health": 84.14,
+      "total_readings": 12134
+    },
+    {
+      "vehicle_id": "GT-032",
+      "tier": "MID",
+      "avg_speed": 72.93,
+      "avg_fuel": 55.12,
+      "avg_health": 79.37,
+      "total_readings": 12046
+    },
+    {
+      "vehicle_id": "GT-033",
+      "tier": "MID",
+      "avg_speed": 73.1,
+      "avg_fuel": 55.26,
+      "avg_health": 80.75,
+      "total_readings": 12191
+    },
+    {
+      "vehicle_id": "GT-034",
+      "tier": "MID",
+      "avg_speed": 73.45,
+      "avg_fuel": 55.04,
+      "avg_health": 81.8,
+      "total_readings": 11943
+    },
+    {
+      "vehicle_id": "GT-035",
+      "tier": "MID",
+      "avg_speed": 73.25,
+      "avg_fuel": 55.27,
+      "avg_health": 83.79,
+      "total_readings": 11969
+    },
+    {
+      "vehicle_id": "GT-036",
+      "tier": "NEW",
+      "avg_speed": 73.46,
+      "avg_fuel": 74.04,
+      "avg_health": 94.51,
+      "total_readings": 11964
+    },
+    {
+      "vehicle_id": "GT-037",
+      "tier": "NEW",
+      "avg_speed": 73.2,
+      "avg_fuel": 74.02,
+      "avg_health": 97.16,
+      "total_readings": 12172
+    },
+    {
+      "vehicle_id": "GT-038",
+      "tier": "NEW",
+      "avg_speed": 72.79,
+      "avg_fuel": 74.11,
+      "avg_health": 96.39,
+      "total_readings": 12040
+    },
+    {
+      "vehicle_id": "GT-039",
+      "tier": "NEW",
+      "avg_speed": 72.84,
+      "avg_fuel": 74.06,
+      "avg_health": 98.31,
+      "total_readings": 11990
+    },
+    {
+      "vehicle_id": "GT-040",
+      "tier": "NEW",
+      "avg_speed": 73.14,
+      "avg_fuel": 74.11,
+      "avg_health": 92.62,
+      "total_readings": 12083
+    },
+    {
+      "vehicle_id": "GT-041",
+      "tier": "NEW",
+      "avg_speed": 73.01,
+      "avg_fuel": 73.93,
+      "avg_health": 97.7,
+      "total_readings": 12025
+    },
+    {
+      "vehicle_id": "GT-042",
+      "tier": "NEW",
+      "avg_speed": 73.05,
+      "avg_fuel": 74.14,
+      "avg_health": 94.66,
+      "total_readings": 12070
+    },
+    {
+      "vehicle_id": "GT-043",
+      "tier": "NEW",
+      "avg_speed": 73.25,
+      "avg_fuel": 74.12,
+      "avg_health": 96.76,
+      "total_readings": 12030
+    },
+    {
+      "vehicle_id": "GT-044",
+      "tier": "NEW",
+      "avg_speed": 73.4,
+      "avg_fuel": 73.93,
+      "avg_health": 94.94,
+      "total_readings": 11972
+    },
+    {
+      "vehicle_id": "GT-045",
+      "tier": "NEW",
+      "avg_speed": 73.5,
+      "avg_fuel": 73.9,
+      "avg_health": 94.49,
+      "total_readings": 12084
+    },
+    {
+      "vehicle_id": "GT-046",
+      "tier": "NEW",
+      "avg_speed": 72.83,
+      "avg_fuel": 74.04,
+      "avg_health": 96.84,
+      "total_readings": 11837
+    },
+    {
+      "vehicle_id": "GT-047",
+      "tier": "NEW",
+      "avg_speed": 72.92,
+      "avg_fuel": 73.72,
+      "avg_health": 97.42,
+      "total_readings": 11977
+    },
+    {
+      "vehicle_id": "GT-048",
+      "tier": "NEW",
+      "avg_speed": 72.95,
+      "avg_fuel": 74.06,
+      "avg_health": 97.9,
+      "total_readings": 12035
+    },
+    {
+      "vehicle_id": "GT-049",
+      "tier": "NEW",
+      "avg_speed": 73.49,
+      "avg_fuel": 74.09,
+      "avg_health": 97.58,
+      "total_readings": 11919
+    },
+    {
+      "vehicle_id": "GT-050",
+      "tier": "NEW",
+      "avg_speed": 73.0,
+      "avg_fuel": 74.0,
+      "avg_health": 95.21,
+      "total_readings": 11989
+    }
+  ],
+  "data_pipeline": {
+    "raw_records_ingested": 1800000,
+    "iot_records": 600000,
+    "booking_records": 580107,
+    "weather_records": 600000,
+    "parquet_files": 12,
+    "s3_buckets": 3,
+    "etl_pipelines": 5,
+    "ml_models_trained": 3,
+    "anomalies_detected": 32763
+  }
+}
