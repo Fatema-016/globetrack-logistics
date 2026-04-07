@@ -1,6 +1,6 @@
 # GlobeTrack Logistics - End-to-End Cloud Big Data Solution 
 
-This project is compeleted under Industry Honour Certification during my SemesterII - MSc Statistics Data Science| Vishwakarma University.
+This project has been completed under Industry Honour Certification during my SemesterII - MSc Statistics Data Science| Vishwakarma University.
 > **TCS iON AIP 135 - End-to-End Cloud Big Data Solution for Real-Time Logistics Intelligence** | cloud : AWS ap-south-1 
 
 A Big Data Analytics pipeline for **GlobeTrack Logistics Ltd.** built on AWS cloud with Python, Scikit-learn, XGBoost, LightGBM,Random Forest, Apache Airflow and CloudWatch.
