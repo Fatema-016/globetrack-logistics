@@ -1,0 +1,114 @@
+{
+  "report_title": "GlobeTrack IoT Anomaly Detection Report",
+  "generated_at": "2026-04-07T03:33:36.639659+00:00",
+  "dataset_size": "600,000 IoT sensor records",
+  "models_used": [
+    "Isolation Forest (full 600K dataset)",
+    "Local Outlier Factor (50K sample)"
+  ],
+  "summary": {
+    "total_records": 600000,
+    "normal": 567237,
+    "anomaly": 32763
+  },
+  "fleet_health": {
+    "healthy_pct": 94.5,
+    "anomaly_pct": 5.5
+  },
+  "tier_breakdown": {
+    "OLD": {
+      "anomaly_count": 18376,
+      "anomaly_rate_pct": 9.0
+    },
+    "MID": {
+      "anomaly_count": 10783,
+      "anomaly_rate_pct": 5.0
+    },
+    "NEW": {
+      "anomaly_count": 3604,
+      "anomaly_rate_pct": 2.0
+    }
+  },
+  "anomalous_vehicles": [
+    {
+      "vehicle_id": "GT-030",
+      "vehicle_tier": "MID",
+      "anomaly_count": 2400,
+      "anomaly_rate_pct": 20.1,
+      "avg_speed": 73.1,
+      "avg_fuel_pct": 54.9
+    },
+    {
+      "vehicle_id": "GT-002",
+      "vehicle_tier": "OLD",
+      "anomaly_count": 2283,
+      "anomaly_rate_pct": 18.9,
+      "avg_speed": 73.0,
+      "avg_fuel_pct": 39.8
+    },
+    {
+      "vehicle_id": "GT-001",
+      "vehicle_tier": "OLD",
+      "anomaly_count": 2125,
+      "anomaly_rate_pct": 17.9,
+      "avg_speed": 73.2,
+      "avg_fuel_pct": 39.9
+    },
+    {
+      "vehicle_id": "GT-012",
+      "vehicle_tier": "OLD",
+      "anomaly_count": 1588,
+      "anomaly_rate_pct": 13.1,
+      "avg_speed": 73.1,
+      "avg_fuel_pct": 40.1
+    },
+    {
+      "vehicle_id": "GT-004",
+      "vehicle_tier": "OLD",
+      "anomaly_count": 1399,
+      "anomaly_rate_pct": 11.8,
+      "avg_speed": 73.1,
+      "avg_fuel_pct": 40.1
+    },
+    {
+      "vehicle_id": "GT-013",
+      "vehicle_tier": "OLD",
+      "anomaly_count": 1306,
+      "anomaly_rate_pct": 10.7,
+      "avg_speed": 72.7,
+      "avg_fuel_pct": 40.1
+    },
+    {
+      "vehicle_id": "GT-010",
+      "vehicle_tier": "OLD",
+      "anomaly_count": 1170,
+      "anomaly_rate_pct": 9.7,
+      "avg_speed": 73.2,
+      "avg_fuel_pct": 40.0
+    },
+    {
+      "vehicle_id": "GT-005",
+      "vehicle_tier": "OLD",
+      "anomaly_count": 958,
+      "anomaly_rate_pct": 7.9,
+      "avg_speed": 73.1,
+      "avg_fuel_pct": 40.2
+    },
+    {
+      "vehicle_id": "GT-025",
+      "vehicle_tier": "MID",
+      "anomaly_count": 931,
+      "anomaly_rate_pct": 7.7,
+      "avg_speed": 73.1,
+      "avg_fuel_pct": 54.8
+    },
+    {
+      "vehicle_id": "GT-006",
+      "vehicle_tier": "OLD",
+      "anomaly_count": 926,
+      "anomaly_rate_pct": 7.8,
+      "avg_speed": 73.2,
+      "avg_fuel_pct": 40.2
+    }
+  ]
+}
