@@ -1,0 +1,4 @@
+vehicle_tier,total_readings,avg_speed,avg_fuel,avg_health,avg_efficiency,vehicle_count,anomaly_rate_pct,health_status
+MID,215642,73.11,55.0,83.01,30.97,18,5.0,Average
+NEW,180187,73.12,74.02,96.16,67.58,15,2.0,Excellent
+OLD,204171,73.18,40.01,72.93,16.17,17,9.0,Poor

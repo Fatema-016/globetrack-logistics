@@ -1,0 +1,20 @@
+KPI,Value,Unit,Category
+Total Vehicles,50.0,vehicles,Fleet
+Avg Speed,73.14,km/h,Fleet
+Avg Fuel Level,55.61,%,Fleet
+Avg Engine Health,83.53,/100,Fleet
+Fleet Health,94.5,%,Fleet
+Anomalies Detected,32763.0,readings,Fleet
+Anomaly Rate,5.5,%,Fleet
+Total Orders,580107.0,orders,Delivery
+Total Delivered,229893.0,orders,Delivery
+Total Delayed,206368.0,orders,Delivery
+On-Time Rate,39.6,%,Delivery
+Delay Rate,35.6,%,Delivery
+Total Revenue,6430823008.0,INR,Delivery
+Avg Freight Charge,11086.0,INR,Delivery
+Express Orders,98561.0,orders,Delivery
+ML AUC Score,73.13,%,ML
+ML Accuracy,69.0,%,ML
+ML Recall,56.84,%,ML
+Test Cases Passed,27.0,/27,Quality
