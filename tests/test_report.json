@@ -1,0 +1,261 @@
+{
+  "report_title": "GlobeTrack Logistics Test Design Document",
+  "project": "TCS iON AIP-135",
+  "generated_at": "2026-04-07T13:26:55.983133+00:00",
+  "total_tests": 27,
+  "passed": 27,
+  "failed": 0,
+  "pass_rate_pct": 100.0,
+  "test_suites": {
+    "Suite 1 - S3 Infrastructure": "TC-001 to TC-006",
+    "Suite 2 - Data Ingestion": "TC-007 to TC-010",
+    "Suite 3 - ETL Processing": "TC-011 to TC-015",
+    "Suite 4 - ML Models": "TC-016 to TC-020",
+    "Suite 5 - Analytics": "TC-021 to TC-027"
+  },
+  "test_results": [
+    {
+      "case_id": "TC-001",
+      "test_name": "Raw data lake bucket exists",
+      "expected": "Accessible",
+      "actual": "Accessible",
+      "status": "PASS",
+      "priority": "HIGH",
+      "timestamp": "2026-04-07T13:26:54.793254+00:00"
+    },
+    {
+      "case_id": "TC-002",
+      "test_name": "Processed data bucket exists",
+      "expected": "Accessible",
+      "actual": "Accessible",
+      "status": "PASS",
+      "priority": "HIGH",
+      "timestamp": "2026-04-07T13:26:55.091919+00:00"
+    },
+    {
+      "case_id": "TC-003",
+      "test_name": "Analytics zone bucket exists",
+      "expected": "Accessible",
+      "actual": "Accessible",
+      "status": "PASS",
+      "priority": "HIGH",
+      "timestamp": "2026-04-07T13:26:55.405411+00:00"
+    },
+    {
+      "case_id": "TC-004",
+      "test_name": "iot-sensor-data/ has files",
+      "expected": "Files present",
+      "actual": "1 file(s) found",
+      "status": "PASS",
+      "priority": "HIGH",
+      "timestamp": "2026-04-07T13:26:55.434893+00:00"
+    },
+    {
+      "case_id": "TC-005",
+      "test_name": "booking-logs/ has files",
+      "expected": "Files present",
+      "actual": "1 file(s) found",
+      "status": "PASS",
+      "priority": "HIGH",
+      "timestamp": "2026-04-07T13:26:55.458492+00:00"
+    },
+    {
+      "case_id": "TC-006",
+      "test_name": "weather-data/ has files",
+      "expected": "Files present",
+      "actual": "1 file(s) found",
+      "status": "PASS",
+      "priority": "HIGH",
+      "timestamp": "2026-04-07T13:26:55.485572+00:00"
+    },
+    {
+      "case_id": "TC-007",
+      "test_name": "IoT large dataset has 60 chunks",
+      "expected": "60 chunks",
+      "actual": "60 chunks",
+      "status": "PASS",
+      "priority": "HIGH",
+      "timestamp": "2026-04-07T13:26:55.594888+00:00"
+    },
+    {
+      "case_id": "TC-008",
+      "test_name": "Bookings large dataset has 60 chunks",
+      "expected": "60 chunks",
+      "actual": "60 chunks",
+      "status": "PASS",
+      "priority": "HIGH",
+      "timestamp": "2026-04-07T13:26:55.627390+00:00"
+    },
+    {
+      "case_id": "TC-009",
+      "test_name": "Weather large dataset has 60 chunks",
+      "expected": "60 chunks",
+      "actual": "60 chunks",
+      "status": "PASS",
+      "priority": "HIGH",
+      "timestamp": "2026-04-07T13:26:55.655337+00:00"
+    },
+    {
+      "case_id": "TC-010",
+      "test_name": "Ingestion manifest exists",
+      "expected": "Manifest present",
+      "actual": "Found",
+      "status": "PASS",
+      "priority": "HIGH",
+      "timestamp": "2026-04-07T13:26:55.673260+00:00"
+    },
+    {
+      "case_id": "TC-011",
+      "test_name": "IoT cleaned Parquet exists",
+      "expected": "Parquet present",
+      "actual": "Found",
+      "status": "PASS",
+      "priority": "HIGH",
+      "timestamp": "2026-04-07T13:26:55.707446+00:00"
+    },
+    {
+      "case_id": "TC-012",
+      "test_name": "Bookings cleaned Parquet exists",
+      "expected": "Parquet present",
+      "actual": "Found",
+      "status": "PASS",
+      "priority": "HIGH",
+      "timestamp": "2026-04-07T13:26:55.739336+00:00"
+    },
+    {
+      "case_id": "TC-013",
+      "test_name": "Weather cleaned Parquet exists",
+      "expected": "Parquet present",
+      "actual": "Found",
+      "status": "PASS",
+      "priority": "HIGH",
+      "timestamp": "2026-04-07T13:26:55.767570+00:00"
+    },
+    {
+      "case_id": "TC-014",
+      "test_name": "Bookings large has 6+ Parquet chunks",
+      "expected": "6+ chunks",
+      "actual": "6 chunks",
+      "status": "PASS",
+      "priority": "HIGH",
+      "timestamp": "2026-04-07T13:26:55.793226+00:00"
+    },
+    {
+      "case_id": "TC-015",
+      "test_name": "IoT large has 6+ Parquet chunks",
+      "expected": "6+ chunks",
+      "actual": "6 chunks",
+      "status": "PASS",
+      "priority": "HIGH",
+      "timestamp": "2026-04-07T13:26:55.821865+00:00"
+    },
+    {
+      "case_id": "TC-016",
+      "test_name": "best_model.pkl exists",
+      "expected": "File present",
+      "actual": "Found (348KB)",
+      "status": "PASS",
+      "priority": "HIGH",
+      "timestamp": "2026-04-07T13:26:55.824927+00:00"
+    },
+    {
+      "case_id": "TC-017",
+      "test_name": "scaler.pkl exists",
+      "expected": "File present",
+      "actual": "Found (1KB)",
+      "status": "PASS",
+      "priority": "HIGH",
+      "timestamp": "2026-04-07T13:26:55.824927+00:00"
+    },
+    {
+      "case_id": "TC-018",
+      "test_name": "model_metadata.json exists",
+      "expected": "File present",
+      "actual": "Found (0KB)",
+      "status": "PASS",
+      "priority": "HIGH",
+      "timestamp": "2026-04-07T13:26:55.824927+00:00"
+    },
+    {
+      "case_id": "TC-019",
+      "test_name": "ML AUC > 70%",
+      "expected": "AUC > 70%",
+      "actual": "AUC: 73.13%",
+      "status": "PASS",
+      "priority": "HIGH",
+      "timestamp": "2026-04-07T13:26:55.834830+00:00"
+    },
+    {
+      "case_id": "TC-020",
+      "test_name": "ML Recall > 50%",
+      "expected": "Recall > 50%",
+      "actual": "Recall: 56.84%",
+      "status": "PASS",
+      "priority": "HIGH",
+      "timestamp": "2026-04-07T13:26:55.834830+00:00"
+    },
+    {
+      "case_id": "TC-021",
+      "test_name": "Master report exists in S3",
+      "expected": "Report present",
+      "actual": "Found",
+      "status": "PASS",
+      "priority": "HIGH",
+      "timestamp": "2026-04-07T13:26:55.871646+00:00"
+    },
+    {
+      "case_id": "TC-022",
+      "test_name": "ML report exists in S3",
+      "expected": "Report present",
+      "actual": "Found",
+      "status": "PASS",
+      "priority": "HIGH",
+      "timestamp": "2026-04-07T13:26:55.898640+00:00"
+    },
+    {
+      "case_id": "TC-023",
+      "test_name": "Anomaly report exists in S3",
+      "expected": "Report present",
+      "actual": "Found",
+      "status": "PASS",
+      "priority": "HIGH",
+      "timestamp": "2026-04-07T13:26:55.923276+00:00"
+    },
+    {
+      "case_id": "TC-024",
+      "test_name": "Master report has 50 vehicles & 500K+ orders",
+      "expected": "50 vehicles, 500K+ orders",
+      "actual": "50 vehicles, 580,107 orders",
+      "status": "PASS",
+      "priority": "HIGH",
+      "timestamp": "2026-04-07T13:26:55.939981+00:00"
+    },
+    {
+      "case_id": "TC-025",
+      "test_name": "CloudWatch has 5 alarms",
+      "expected": "5 alarms",
+      "actual": "5 alarms",
+      "status": "PASS",
+      "priority": "HIGH",
+      "timestamp": "2026-04-07T13:26:55.956166+00:00"
+    },
+    {
+      "case_id": "TC-026",
+      "test_name": "Airflow DAG valid Python syntax",
+      "expected": "Valid syntax",
+      "actual": "DAG parsed successfully",
+      "status": "PASS",
+      "priority": "HIGH",
+      "timestamp": "2026-04-07T13:26:55.962652+00:00"
+    },
+    {
+      "case_id": "TC-027",
+      "test_name": "Fleet health > 90%",
+      "expected": "Health > 90%",
+      "actual": "Health: 94.5%",
+      "status": "PASS",
+      "priority": "HIGH",
+      "timestamp": "2026-04-07T13:26:55.982121+00:00"
+    }
+  ]
+}

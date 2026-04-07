@@ -1,0 +1,40 @@
+{
+  "generated_at": "2026-04-07T13:17:21.165825+00:00",
+  "namespace": "GlobeTrack/Pipeline",
+  "dashboard": "GlobeTrack-Logistics-Dashboard",
+  "sns_topic_arn": "arn:aws:sns:ap-south-1:277328279496:globetrack-pipeline-alerts",
+  "metrics_count": 12,
+  "alarms_count": 5,
+  "alarms": [
+    {
+      "name": "GlobeTrack-FleetHealth-Critical",
+      "metric": "FleetHealthScore",
+      "threshold": 85.0,
+      "operator": "LessThanThreshold"
+    },
+    {
+      "name": "GlobeTrack-DelayRate-High",
+      "metric": "DelayRate",
+      "threshold": 50.0,
+      "operator": "GreaterThanThreshold"
+    },
+    {
+      "name": "GlobeTrack-Ingestion-Failed",
+      "metric": "IngestionSuccessRate",
+      "threshold": 95.0,
+      "operator": "LessThanThreshold"
+    },
+    {
+      "name": "GlobeTrack-MLModel-Degraded",
+      "metric": "ModelAUCScore",
+      "threshold": 60.0,
+      "operator": "LessThanThreshold"
+    },
+    {
+      "name": "GlobeTrack-Anomaly-Spike",
+      "metric": "AnomaliesDetected",
+      "threshold": 60000,
+      "operator": "GreaterThanThreshold"
+    }
+  ]
+}
