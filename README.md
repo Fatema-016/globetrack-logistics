@@ -81,8 +81,8 @@ globetrack-logistics/
 │     test_cases.py              - 27 automated test cases
 │
 └── docs/
-architecture_diagram.html  
-runbook.html               - Operational runbook 
+PowerBI dashboard screenshots
+submission_report           
 ingestion_manifest.csv     - Sample ingestion manifest
 ```
 ---
