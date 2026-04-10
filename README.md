@@ -28,7 +28,7 @@ At GlobeTrack Logistics Ltd., this system collects, processes and analyses simul
 
 ---
 
-## Architecture (see docs/architecture_diagram.html for the full diagram.)
+## Architecture 
 Data Sources -> Ingestion -> Raw S3 Lake -> ETL Processing -> Processed S3 -> ML & Analytics -> Analytics S3 
 -> Airflow Orchestration -> CloudWatch Monitoring
 
